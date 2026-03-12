@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Map — GFMINHS Guide</title>
+    <title>FAQ — GFMINHS Guide</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="options.css">
+    <link rel="stylesheet" href="help.css">
     <link rel="stylesheet" href="wip.css">
 </head>
 
@@ -55,8 +55,8 @@
             <ul class="nav-links">
                 <li><a href="main.html#home" class="nav-link">Home</a></li>
                 <li><a href="main.html#learn" class="nav-link">Learn More</a></li>
-                <li><a href="main.html#options" class="nav-link active">Options</a></li>
-                <li><a href="main.html#help" class="nav-link">Help</a></li>
+                <li><a href="main.html#options" class="nav-link">Options</a></li>
+                <li><a href="main.html#help" class="nav-link active">Help</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
@@ -65,8 +65,8 @@
         <div class="mobile-menu" id="mobileMenu">
             <a href="main.html#home" class="mobile-link">Home</a>
             <a href="main.html#learn" class="mobile-link">Learn More</a>
-            <a href="main.html#options" class="mobile-link active">Options</a>
-            <a href="main.html#help" class="mobile-link">Help</a>
+            <a href="main.html#options" class="mobile-link">Options</a>
+            <a href="main.html#help" class="mobile-link active">Help</a>
         </div>
     </nav>
 
@@ -77,57 +77,56 @@
             <div class="page-hero-overlay"></div>
         </div>
         <div class="page-hero-content">
-            <a href="main.html#options" class="back-link">← Back to Options</a>
-            <span class="hero-sub">Navigation</span>
+            <a href="main.html#help" class="back-link">← Back to Help</a>
+            <span class="hero-sub">Support</span>
             <h1 class="page-hero-title">
-                <span class="hero-title-line">Campus</span>
-                <span class="hero-title-line accent">Map</span>
+                <span class="hero-title-line">Frequently Asked</span>
+                <span class="hero-title-line accent">Questions</span>
             </h1>
-            <p class="page-hero-desc">Find your way around the GFMINHS campus — building locations, rooms, facilities, and key areas.</p>
+            <p class="page-hero-desc">Find answers to the most common questions about enrollment, schedules, policies, and school life.</p>
         </div>
     </section>
 
     <!-- Content -->
-    <main class="page-main">
-        <div class="page-container">
+    <main class="help-main">
+        <div class="help-container">
             <div class="placeholder-banner">
-                <span class="placeholder-banner-icon">🏫</span>
+                <span class="placeholder-banner-icon">❓</span>
                 <div>
-                    <h2>Campus Map</h2>
-                    <p>This section will feature an interactive campus map with labeled buildings, classrooms, facilities, and a Google Maps embed for directions. Currently being developed.</p>
+                    <h2>FAQ Page</h2>
+                    <p>This section will contain an expandable FAQ organized by topic — enrollment, academics, clubs, schedules, policies, and general school information. Content is being written.</p>
                 </div>
             </div>
-            <div class="placeholder-grid">
-            <div class="placeholder-card">
-                <span class="placeholder-card-icon">🗺️</span>
-                <h3>Interactive Map</h3>
-                <p>A labeled visual layout of all buildings, rooms, and outdoor areas on campus.</p>
+
+            <!-- Placeholder accordion groups -->
+            <div class="faq-group">
+                <p class="faq-group-title">Enrollment</p>
+                <div class="faq-item">
+                    <div class="faq-question">When does enrollment open for the next school year? <span class="faq-chevron">▾</span></div>
+                    <div class="faq-answer"><p>Placeholder — enrollment dates and procedures will be detailed here.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What documents are required for enrollment? <span class="faq-chevron">▾</span></div>
+                    <div class="faq-answer"><p>Placeholder — full requirements checklist will appear here once confirmed.</p></div>
+                </div>
             </div>
-            <div class="placeholder-card">
-                <span class="placeholder-card-icon">🏢</span>
-                <h3>Building Directory</h3>
-                <p>A list of all named buildings with the offices and rooms contained in each.</p>
+            <div class="faq-group">
+                <p class="faq-group-title">Academics</p>
+                <div class="faq-item">
+                    <div class="faq-question">What SHS tracks and strands are offered? <span class="faq-chevron">▾</span></div>
+                    <div class="faq-answer"><p>Placeholder — available SHS tracks and strand details will be listed here.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How is the quarterly grade computed? <span class="faq-chevron">▾</span></div>
+                    <div class="faq-answer"><p>Placeholder — grading breakdown and computation guide will appear here.</p></div>
+                </div>
             </div>
-            <div class="placeholder-card">
-                <span class="placeholder-card-icon">🚻</span>
-                <h3>Facilities</h3>
-                <p>Locations of comfort rooms, canteen, library, gym, and other key facilities.</p>
-            </div>
-            <div class="placeholder-card">
-                <span class="placeholder-card-icon">📍</span>
-                <h3>Room Finder</h3>
-                <p>Search for a specific room number and get its building and floor location.</p>
-            </div>
-            <div class="placeholder-card">
-                <span class="placeholder-card-icon">🚗</span>
-                <h3>Getting Here</h3>
-                <p>Directions to GFMINHS from major landmarks in General Trias City, Cavite.</p>
-            </div>
-            <div class="placeholder-card">
-                <span class="placeholder-card-icon">🗺️</span>
-                <h3>Google Maps</h3>
-                <p>An embedded map view showing the school's exact location and surroundings.</p>
-            </div>
+            <div class="faq-group">
+                <p class="faq-group-title">General</p>
+                <div class="faq-item">
+                    <div class="faq-question">What are the school hours? <span class="faq-chevron">▾</span></div>
+                    <div class="faq-answer"><p>Placeholder — official class and office hours will be confirmed here.</p></div>
+                </div>
             </div>
         </div>
     </main>
@@ -154,5 +153,14 @@
     </footer>
 
     <script src="main.js"></script>
+    <script>
+        // FAQ accordion toggle
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                item.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>

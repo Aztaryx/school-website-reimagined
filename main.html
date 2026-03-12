@@ -27,6 +27,7 @@
                 <li><a href="#learn" class="nav-link">Learn More</a></li>
                 <li><a href="#options" class="nav-link">Options</a></li>
                 <li><a href="#help" class="nav-link">Help</a></li>
+                <li><a href="#file-guide" class="nav-link">Dev Guide</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
@@ -37,6 +38,7 @@
             <a href="#learn" class="mobile-link">Learn More</a>
             <a href="#options" class="mobile-link">Options</a>
             <a href="#help" class="mobile-link">Help</a>
+            <a href="#file-guide" class="mobile-link">Dev Guide</a>
         </div>
     </nav>
 
@@ -118,37 +120,41 @@
                     extracurricular programs.</p>
             </div>
             <div class="options-grid">
-                <a href="#" class="option-tile">
+                <a href="enrollment.html" class="option-tile">
                     <span class="option-icon">📋</span>
                     <span class="option-label">Enrollment</span>
                 </a>
-                <a href="#" class="option-tile">
+                <a href="academics.html" class="option-tile">
                     <span class="option-icon">📚</span>
                     <span class="option-label">Academics</span>
                 </a>
-                <a href="#" class="option-tile">
+                <a href="map.html" class="option-tile">
                     <span class="option-icon">🏫</span>
                     <span class="option-label">Campus Map</span>
                 </a>
-                <a href="#" class="option-tile">
+                <a href="calendar.html" class="option-tile">
                     <span class="option-icon">📅</span>
                     <span class="option-label">Calendar</span>
                 </a>
-                <a href="#" class="option-tile">
+                <a href="faculty.html" class="option-tile">
                     <span class="option-icon">👨‍🏫</span>
                     <span class="option-label">Faculty</span>
                 </a>
-                <a href="#" class="option-tile">
+                <a href="clubsnorgs.html" class="option-tile">
                     <span class="option-icon">🎓</span>
                     <span class="option-label">Clubs & Orgs</span>
                 </a>
-                <a href="#" class="option-tile">
+                <a href="forms.html" class="option-tile">
                     <span class="option-icon">📝</span>
                     <span class="option-label">Forms</span>
                 </a>
-                <a href="#" class="option-tile">
+                <a href="announcements.html" class="option-tile">
                     <span class="option-icon">📣</span>
                     <span class="option-label">Announcements</span>
+                </a>
+                <a href="schoolsched.html" class="option-tile">
+                    <span class="option-icon">🕐</span>
+                    <span class="option-label">Schedule</span>
                 </a>
             </div>
         </div>
@@ -168,21 +174,300 @@
                     <div class="help-icon">📞</div>
                     <h3>Contact Us</h3>
                     <p>Reach out to the school administration for any inquiries, concerns, or feedback.</p>
-                    <a href="#" class="btn btn-primary btn-sm">Get in Touch</a>
+                    <a href="contactinfo.html" class="btn btn-primary btn-sm">Get in Touch</a>
                 </div>
                 <div class="help-card">
                     <div class="help-icon">❓</div>
                     <h3>FAQ</h3>
                     <p>Browse frequently asked questions about enrollment, schedules, policies, and more.</p>
-                    <a href="#" class="btn btn-primary btn-sm">View FAQs</a>
+                    <a href="faq.html" class="btn btn-primary btn-sm">View FAQs</a>
                 </div>
                 <div class="help-card">
                     <div class="help-icon">🗺️</div>
                     <h3>How to Find Us</h3>
                     <p>Located in General Trias City, Cavite. Get directions and find us on the map.</p>
-                    <a href="#" class="btn btn-primary btn-sm">Get Directions</a>
+                    <a href="map.html" class="btn btn-primary btn-sm">Get Directions</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         FILE GUIDE — Developer / Structure Reference
+         Explains every file in the project and which CSS
+         stylesheet is responsible for each group of pages.
+    ═══════════════════════════════════════════════════ -->
+    <section class="section file-guide-section" id="file-guide">
+        <div class="section-container">
+
+            <div class="section-header">
+                <span class="section-tag">Developer Reference</span>
+                <h2 class="section-title">File Guide</h2>
+                <p class="section-desc">An overview of every file in this project — what each page does, which
+                    stylesheet controls it, and how the JavaScript is wired together.</p>
+            </div>
+
+            <!-- CSS GROUPS -->
+            <div class="guide-block">
+                <h3 class="guide-block-title">
+                    <span class="guide-block-icon">🎨</span> CSS Stylesheet Groups
+                </h3>
+                <p class="guide-block-intro">Each stylesheet governs a specific set of pages. All pages also pull from
+                    <code>main.css</code> for base resets, the navbar, buttons, footer, and global utilities.</p>
+
+                <div class="css-group-grid">
+                    <div class="css-group-card">
+                        <div class="css-group-file">main.css</div>
+                        <div class="css-group-desc">Controls the entire landing page (<code>main.html</code>): CSS
+                            variables, resets, navbar, hero section, Learn More cards, Options tiles, Help cards,
+                            footer, scroll reveal animations, and responsive breakpoints. Also acts as the shared base
+                            imported by every sub-page.</div>
+                        <div class="css-group-pages">
+                            <span class="css-page-tag">main.html</span>
+                            <span class="css-page-tag secondary">+ all sub-pages (base)</span>
+                        </div>
+                    </div>
+
+                    <div class="css-group-card">
+                        <div class="css-group-file">options.css</div>
+                        <div class="css-group-desc">Controls the shared layout for all Options sub-pages: the page
+                            hero banner, back link, placeholder cards, shimmer loading states, filter bar, and the
+                            full schedule timetable (used by <code>schoolsched.html</code>).</div>
+                        <div class="css-group-pages">
+                            <span class="css-page-tag">enrollment.html</span>
+                            <span class="css-page-tag">academics.html</span>
+                            <span class="css-page-tag">map.html</span>
+                            <span class="css-page-tag">calendar.html</span>
+                            <span class="css-page-tag">faculty.html</span>
+                            <span class="css-page-tag">clubsnorgs.html</span>
+                            <span class="css-page-tag">forms.html</span>
+                            <span class="css-page-tag">announcements.html</span>
+                            <span class="css-page-tag">schoolsched.html</span>
+                        </div>
+                    </div>
+
+                    <div class="css-group-card">
+                        <div class="css-group-file">help.css</div>
+                        <div class="css-group-desc">Controls the shared layout for Help sub-pages: the page hero,
+                            FAQ accordion items and open/close animation, contact info cards, the map embed
+                            placeholder wrapper, and the placeholder banner used before content is live.</div>
+                        <div class="css-group-pages">
+                            <span class="css-page-tag">faq.html</span>
+                            <span class="css-page-tag">contactinfo.html</span>
+                        </div>
+                    </div>
+
+                    <div class="css-group-card highlight">
+                        <div class="css-group-file">wip.css</div>
+                        <div class="css-group-desc">Controls the full-screen WIP overlay that locks every sub-page
+                            behind a password prompt. Includes the backdrop, animated box, input field, shake
+                            keyframe, and fade-out exit animation. Toggled by <code>main.js</code>
+                            → <code>initWIP()</code>.</div>
+                        <div class="css-group-pages">
+                            <span class="css-page-tag secondary">All sub-pages (overlay)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JS FILE -->
+            <div class="guide-block">
+                <h3 class="guide-block-title">
+                    <span class="guide-block-icon">⚡</span> main.js — All JavaScript
+                </h3>
+                <p class="guide-block-intro">A single script handles all interactive behavior across the entire site.
+                    It is loaded by every page via <code>&lt;script src="main.js"&gt;&lt;/script&gt;</code> at the
+                    bottom of each file.</p>
+                <div class="js-feature-list">
+                    <div class="js-feature">
+                        <span class="js-feature-label">Navbar scroll</span>
+                        <span class="js-feature-desc">Adds the <code>.scrolled</code> class to <code>#navbar</code>
+                            after scrolling 60px, triggering the frosted-glass background. Also highlights the
+                            active nav link based on scroll position.</span>
+                    </div>
+                    <div class="js-feature">
+                        <span class="js-feature-label">Hamburger menu</span>
+                        <span class="js-feature-desc">Toggles the <code>.open</code> class on <code>#hamburger</code>
+                            and <code>#mobileMenu</code>. Mobile links close the menu on click.</span>
+                    </div>
+                    <div class="js-feature">
+                        <span class="js-feature-label">Scroll reveal</span>
+                        <span class="js-feature-desc">Uses <code>IntersectionObserver</code> to add the
+                            <code>.visible</code> class to <code>.card</code>, <code>.option-tile</code>,
+                            <code>.help-card</code>, and <code>.section-header</code> elements as they enter the
+                            viewport, triggering their fade-up animation from <code>main.css</code>.</span>
+                    </div>
+                    <div class="js-feature">
+                        <span class="js-feature-label">Smooth scroll</span>
+                        <span class="js-feature-desc">Intercepts all <code>href="#..."</code> anchor clicks and scrolls
+                            smoothly with a 70px navbar offset.</span>
+                    </div>
+                    <div class="js-feature highlight-feature">
+                        <span class="js-feature-label">initWIP() — WIP Overlay</span>
+                        <span class="js-feature-desc">Runs on <code>DOMContentLoaded</code>. If a page has
+                            <code>#wipOverlay</code>, the overlay is shown and scroll is locked. On correct password
+                            (<strong>oracle</strong>), sets <code>sessionStorage('wip_bypass', '1')</code> and fades
+                            the overlay out. Subsequent navigations skip the prompt for the entire session. Wrong
+                            passwords trigger a shake animation on <code>#wipBox</code>.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FILE INDEX -->
+            <div class="guide-block">
+                <h3 class="guide-block-title">
+                    <span class="guide-block-icon">📁</span> Full File Index
+                </h3>
+                <div class="file-index-table-wrap">
+                    <table class="file-index-table">
+                        <thead>
+                            <tr>
+                                <th>File</th>
+                                <th>Type</th>
+                                <th>CSS</th>
+                                <th>WIP</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>main.html</code></td>
+                                <td><span class="ftype html">HTML</span></td>
+                                <td><code>main.css</code></td>
+                                <td><span class="fwip no">No</span></td>
+                                <td>Landing page — hero, learn more, options, help, file guide, footer.</td>
+                            </tr>
+                            <tr>
+                                <td><code>main.css</code></td>
+                                <td><span class="ftype css">CSS</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>Global base styles, navbar, hero, cards, tiles, help cards, footer, animations.</td>
+                            </tr>
+                            <tr>
+                                <td><code>main.js</code></td>
+                                <td><span class="ftype js">JS</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>All JavaScript: navbar, hamburger, scroll reveal, smooth scroll, WIP overlay.</td>
+                            </tr>
+                            <tr>
+                                <td><code>options.css</code></td>
+                                <td><span class="ftype css">CSS</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>Shared layout for all Options sub-pages: page hero, placeholder cards, filter bar, schedule table.</td>
+                            </tr>
+                            <tr>
+                                <td><code>help.css</code></td>
+                                <td><span class="ftype css">CSS</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>Shared layout for Help sub-pages: page hero, FAQ accordion, contact cards, map wrapper.</td>
+                            </tr>
+                            <tr>
+                                <td><code>wip.css</code></td>
+                                <td><span class="ftype css">CSS</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>WIP overlay component: backdrop, animated box, input, shake, fade-out exit.</td>
+                            </tr>
+                            <tr class="tr-group">
+                                <td><code>enrollment.html</code></td>
+                                <td><span class="ftype html">HTML</span></td>
+                                <td><code>options.css</code></td>
+                                <td><span class="fwip yes">Yes</span></td>
+                                <td>Enrollment info — requirements, schedule, steps, re-enrollment, SHS admission.</td>
+                            </tr>
+                            <tr>
+                                <td><code>academics.html</code></td>
+                                <td><span class="ftype html">HTML</span></td>
+                                <td><code>options.css</code></td>
+                                <td><span class="fwip yes">Yes</span></td>
+                                <td>Academic programs — JHS subjects, SHS tracks (STEM, ABM, HUMSS, TVL), grading.</td>
+                            </tr>
+                            <tr>
+                                <td><code>map.html</code></td>
+                                <td><span class="ftype html">HTML</span></td>
+                                <td><code>options.css</code></td>
+                                <td><span class="fwip yes">Yes</span></td>
+                                <td>Campus map — building directory, room finder, facilities, Google Maps embed.</td>
+                            </tr>
+                            <tr>
+                                <td><code>calendar.html</code></td>
+                                <td><span class="ftype html">HTML</span></td>
+                                <td><code>options.css</code></td>
+                                <td><span class="fwip yes">Yes</span></td>
+                                <td>School calendar — monthly view, semesters, events, holidays, exam weeks.</td>
+                            </tr>
+                            <tr>
+                                <td><code>faculty.html</code></td>
+                                <td><span class="ftype html">HTML</span></td>
+                                <td><code>options.css</code></td>
+                                <td><span class="fwip yes">Yes</span></td>
+                                <td>Faculty directory — departments, subject assignments, staff contacts.</td>
+                            </tr>
+                            <tr>
+                                <td><code>clubsnorgs.html</code></td>
+                                <td><span class="ftype html">HTML</span></td>
+                                <td><code>options.css</code></td>
+                                <td><span class="fwip yes">Yes</span></td>
+                                <td>Clubs & organizations — SSG, performing arts, publication, science club, sports.</td>
+                            </tr>
+                            <tr>
+                                <td><code>forms.html</code></td>
+                                <td><span class="ftype html">HTML</span></td>
+                                <td><code>options.css</code></td>
+                                <td><span class="fwip yes">Yes</span></td>
+                                <td>Downloadable forms — enrollment slip, clearance, club registration, permits.</td>
+                            </tr>
+                            <tr>
+                                <td><code>announcements.html</code></td>
+                                <td><span class="ftype html">HTML</span></td>
+                                <td><code>options.css</code></td>
+                                <td><span class="fwip yes">Yes</span></td>
+                                <td>Announcements — pinned notices, upcoming events, advisories, DepEd circulars.</td>
+                            </tr>
+                            <tr>
+                                <td><code>schoolsched.html</code></td>
+                                <td><span class="ftype html">HTML</span></td>
+                                <td><code>options.css</code></td>
+                                <td><span class="fwip yes">Yes</span></td>
+                                <td>School schedule — grade/section filter, timetable, legend. Also uses <code>schoolsched.js</code>.</td>
+                            </tr>
+                            <tr class="tr-group">
+                                <td><code>faq.html</code></td>
+                                <td><span class="ftype html">HTML</span></td>
+                                <td><code>help.css</code></td>
+                                <td><span class="fwip yes">Yes</span></td>
+                                <td>FAQ — expandable accordion grouped by enrollment, academics, and general topics.</td>
+                            </tr>
+                            <tr>
+                                <td><code>contactinfo.html</code></td>
+                                <td><span class="ftype html">HTML</span></td>
+                                <td><code>help.css</code></td>
+                                <td><span class="fwip yes">Yes</span></td>
+                                <td>Contact info — office contacts, registrar, guidance, finance, maps embed.</td>
+                            </tr>
+                            <tr class="tr-group">
+                                <td><code>background.png</code></td>
+                                <td><span class="ftype img">IMG</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>Hero and page-hero background image used across all pages.</td>
+                            </tr>
+                            <tr>
+                                <td><code>logo.png</code></td>
+                                <td><span class="ftype img">IMG</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>School seal/logo used in the navbar, hero badge, and footer.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -202,6 +487,7 @@
                 <a href="#learn">Learn More</a>
                 <a href="#options">Options</a>
                 <a href="#help">Help</a>
+                <a href="#file-guide">Dev Guide</a>
             </div>
             <p class="footer-copy">© 2025 GFMINHS Learning Guide. All rights reserved.</p>
         </div>

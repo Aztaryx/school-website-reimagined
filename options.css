@@ -1,0 +1,457 @@
+/* ===== OPTIONS SUB-PAGES CSS ===== */
+/* Controls: enrollment.html, academics.html, map.html,             */
+/*           calendar.html, faculty.html, clubsnorgs.html,          */
+/*           forms.html, announcements.html, schoolsched.html       */
+
+/* ===== PAGE HERO ===== */
+.page-hero {
+    position: relative;
+    min-height: 42vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding-bottom: 3.5rem;
+}
+
+.page-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.page-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg,
+        rgba(10, 22, 50, 0.92) 0%,
+        rgba(15, 37, 72, 0.82) 60%,
+        rgba(10, 22, 50, 0.95) 100%);
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 6rem 2rem 0;
+    animation: fade-up 0.7s ease both;
+}
+
+.back-link {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+.page-hero-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 0.75rem;
+    color: var(--white);
+}
+
+.hero-title-line {
+    display: block;
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+}
+
+.hero-title-line.accent {
+    color: var(--accent);
+}
+
+.hero-sub {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.page-hero-desc {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.65);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-top: 0.6rem;
+}
+
+/* ===== PAGE MAIN CONTENT ===== */
+.page-main {
+    background: var(--off-white);
+    padding: 4rem 0 6rem;
+    min-height: 50vh;
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ===== PLACEHOLDER / WIP CONTENT ===== */
+.placeholder-banner {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid rgba(245, 166, 35, 0.2);
+}
+
+.placeholder-banner-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.placeholder-banner h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.35rem;
+}
+
+.placeholder-banner p {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.6;
+}
+
+.placeholder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+.placeholder-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.placeholder-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.placeholder-card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.85rem;
+    display: block;
+}
+
+.placeholder-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.placeholder-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.placeholder-shimmer {
+    background: linear-gradient(90deg, var(--border) 25%, rgba(255,255,255,0.8) 50%, var(--border) 75%);
+    background-size: 200% 100%;
+    border-radius: 6px;
+    animation: shimmer 1.6s infinite;
+}
+
+@keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.shimmer-line {
+    height: 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.shimmer-line.short { width: 55%; }
+.shimmer-line.med   { width: 75%; }
+.shimmer-line.full  { width: 100%; }
+.shimmer-block {
+    height: 120px;
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+}
+
+/* ===== FILTER BAR (schoolsched, academics, etc.) ===== */
+.filter-bar-wrap {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(15, 37, 72, 0.06);
+}
+
+.filter-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 160px;
+}
+
+.filter-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+.select-wrap {
+    position: relative;
+}
+
+.filter-select {
+    appearance: none;
+    width: 100%;
+    padding: 0.6rem 2rem 0.6rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875rem;
+    color: var(--text);
+    background: var(--off-white);
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.filter-select:focus { border-color: var(--primary); }
+
+.select-wrap::after {
+    content: '▾';
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    pointer-events: none;
+}
+
+/* ===== SCHEDULE TABLE (schoolsched) ===== */
+.sched-main {
+    background: var(--off-white);
+    padding: 3rem 0 5rem;
+    min-height: 50vh;
+}
+
+.sched-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.sched-empty {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px dashed var(--border);
+}
+
+.sched-empty-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+
+.sched-empty-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.6rem;
+}
+
+.sched-empty-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.sched-info-bar {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+
+.sched-info-detail { display: flex; flex-direction: column; gap: 0.1rem; }
+
+.sched-info-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+.sched-info-value {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.sched-print-btn { margin-left: auto; }
+
+.timetable-scroll {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.timetable {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+.timetable th,
+.timetable td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.timetable thead th {
+    background: var(--primary);
+    color: var(--white);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+}
+
+.timetable .time-col {
+    background: var(--primary-dark);
+    color: var(--accent);
+    font-weight: 700;
+    min-width: 110px;
+}
+
+.timetable tbody tr:nth-child(even) td { background: var(--off-white); }
+.timetable tbody tr:hover td { background: rgba(26, 58, 107, 0.05); }
+
+.timetable td.subject-cell {
+    background: rgba(26, 58, 107, 0.08);
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.8rem;
+}
+
+.timetable td.break-cell {
+    background: rgba(245, 166, 35, 0.1);
+    color: var(--accent);
+    font-style: italic;
+    font-size: 0.78rem;
+}
+
+.legend {
+    margin-top: 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+}
+
+.legend-title {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-bottom: 0.85rem;
+}
+
+.legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: var(--text);
+    background: var(--off-white);
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .page-hero { min-height: 38vh; padding-bottom: 2.5rem; }
+
+    .placeholder-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .filter-bar { flex-direction: column; align-items: stretch; }
+    .filter-group { min-width: 100%; }
+
+    .sched-info-bar { gap: 1rem; }
+    .sched-print-btn { margin-left: 0; width: 100%; justify-content: center; }
+}

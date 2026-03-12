@@ -811,3 +811,271 @@ a {
         font-size: 1.8rem;
     }
 }
+/* ===== FILE GUIDE SECTION ===== */
+.file-guide-section {
+    background: var(--primary-dark);
+}
+
+.file-guide-section .section-title,
+.file-guide-section .section-desc {
+    color: var(--white);
+}
+
+.file-guide-section .section-desc {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.guide-block {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.guide-block-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.guide-block-icon { font-size: 1.1rem; }
+
+.guide-block-intro {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.guide-block-intro code {
+    background: rgba(245, 166, 35, 0.12);
+    color: var(--accent-light);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.82rem;
+}
+
+/* CSS Group Cards */
+.css-group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.css-group-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    transition: border-color 0.3s;
+}
+
+.css-group-card:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.css-group-card.highlight {
+    border-color: rgba(245, 166, 35, 0.25);
+    background: rgba(245, 166, 35, 0.05);
+}
+
+.css-group-file {
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+}
+
+.css-group-desc {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.65;
+    margin-bottom: 1rem;
+}
+
+.css-group-desc code {
+    background: rgba(245, 166, 35, 0.12);
+    color: var(--accent-light);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.78rem;
+}
+
+.css-group-pages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.css-page-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: 20px;
+    background: rgba(26, 58, 107, 0.5);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Courier New', monospace;
+}
+
+.css-page-tag.secondary {
+    background: rgba(245, 166, 35, 0.1);
+    color: rgba(245, 166, 35, 0.8);
+    border-color: rgba(245, 166, 35, 0.2);
+}
+
+/* JS Feature List */
+.js-feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.js-feature {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1rem;
+    padding: 0.9rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 8px;
+    align-items: start;
+}
+
+.js-feature.highlight-feature {
+    border-color: rgba(245, 166, 35, 0.25);
+    background: rgba(245, 166, 35, 0.04);
+}
+
+.js-feature-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding-top: 0.1rem;
+}
+
+.js-feature-desc {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.65;
+}
+
+.js-feature-desc code {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.78rem;
+}
+
+.js-feature-desc strong {
+    color: var(--accent-light);
+}
+
+/* File Index Table */
+.file-index-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.file-index-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    min-width: 680px;
+}
+
+.file-index-table thead th {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.file-index-table tbody td {
+    padding: 0.65rem 1rem;
+    color: rgba(255, 255, 255, 0.65);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: middle;
+}
+
+.file-index-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.file-index-table tbody tr:hover td {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.file-index-table tr.tr-group td {
+    border-top: 1px solid rgba(245, 166, 35, 0.15);
+}
+
+.file-index-table code {
+    font-family: 'Courier New', monospace;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.8rem;
+}
+
+.ftype {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.18rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.ftype.html { background: rgba(230, 100, 50, 0.25); color: #e8795a; }
+.ftype.css  { background: rgba(50, 130, 230, 0.25); color: #6aabf0; }
+.ftype.js   { background: rgba(245, 200, 0, 0.2);   color: #f5c842; }
+.ftype.img  { background: rgba(80, 200, 120, 0.2);  color: #6dcc90; }
+
+.fwip {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.18rem 0.55rem;
+    border-radius: 20px;
+}
+
+.fwip.yes {
+    background: rgba(245, 166, 35, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(245, 166, 35, 0.3);
+}
+
+.fwip.no {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments for guide */
+@media (max-width: 768px) {
+    .js-feature {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+    }
+
+    .css-group-grid {
+        grid-template-columns: 1fr;
+    }
+}

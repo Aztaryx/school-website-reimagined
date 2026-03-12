@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Map — GFMINHS Guide</title>
+    <title>School Schedule — GFMINHS Guide</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -78,57 +78,104 @@
         </div>
         <div class="page-hero-content">
             <a href="main.html#options" class="back-link">← Back to Options</a>
-            <span class="hero-sub">Navigation</span>
+            <span class="hero-sub">Academics</span>
             <h1 class="page-hero-title">
-                <span class="hero-title-line">Campus</span>
-                <span class="hero-title-line accent">Map</span>
+                <span class="hero-title-line">School</span>
+                <span class="hero-title-line accent">Schedule</span>
             </h1>
-            <p class="page-hero-desc">Find your way around the GFMINHS campus — building locations, rooms, facilities, and key areas.</p>
+            <p class="page-hero-desc">View the official weekly class schedules for all grade levels and sections at
+                GFMINHS.</p>
         </div>
     </section>
 
-    <!-- Content -->
-    <main class="page-main">
-        <div class="page-container">
-            <div class="placeholder-banner">
-                <span class="placeholder-banner-icon">🏫</span>
-                <div>
-                    <h2>Campus Map</h2>
-                    <p>This section will feature an interactive campus map with labeled buildings, classrooms, facilities, and a Google Maps embed for directions. Currently being developed.</p>
+    <!-- Filter Bar -->
+    <div class="filter-bar-wrap">
+        <div class="filter-bar">
+            <div class="filter-group">
+                <label class="filter-label" for="gradeSelect">Grade Level</label>
+                <div class="select-wrap">
+                    <select id="gradeSelect" class="filter-select">
+                        <option value="">— Select Grade —</option>
+                        <option value="7">Grade 7</option>
+                        <option value="8">Grade 8</option>
+                        <option value="9">Grade 9</option>
+                        <option value="10">Grade 10</option>
+                        <option value="11">Grade 11</option>
+                        <option value="12">Grade 12</option>
+                    </select>
                 </div>
             </div>
-            <div class="placeholder-grid">
-            <div class="placeholder-card">
-                <span class="placeholder-card-icon">🗺️</span>
-                <h3>Interactive Map</h3>
-                <p>A labeled visual layout of all buildings, rooms, and outdoor areas on campus.</p>
+            <div class="filter-group">
+                <label class="filter-label" for="sectionSelect">Section</label>
+                <div class="select-wrap">
+                    <select id="sectionSelect" class="filter-select" disabled>
+                        <option value="">— Select Section —</option>
+                    </select>
+                </div>
             </div>
-            <div class="placeholder-card">
-                <span class="placeholder-card-icon">🏢</span>
-                <h3>Building Directory</h3>
-                <p>A list of all named buildings with the offices and rooms contained in each.</p>
+            <button class="btn btn-primary" id="viewBtn" disabled>View Schedule</button>
+        </div>
+    </div>
+
+    <!-- Schedule Main -->
+    <main class="sched-main">
+        <div class="sched-container">
+
+            <!-- Empty / Default State -->
+            <div class="sched-empty" id="schedEmpty">
+                <div class="sched-empty-icon">📅</div>
+                <h2 class="sched-empty-title">Select a Grade &amp; Section</h2>
+                <p class="sched-empty-desc">Use the filters above to choose a grade level and section to display their
+                    weekly class schedule.</p>
             </div>
-            <div class="placeholder-card">
-                <span class="placeholder-card-icon">🚻</span>
-                <h3>Facilities</h3>
-                <p>Locations of comfort rooms, canteen, library, gym, and other key facilities.</p>
+
+            <!-- Schedule Table (hidden until selection) -->
+            <div class="sched-table-wrap" id="schedTableWrap" hidden>
+
+                <div class="sched-info-bar">
+                    <div class="sched-info-detail">
+                        <span class="sched-info-label">Grade Level</span>
+                        <span class="sched-info-value" id="infoGrade">—</span>
+                    </div>
+                    <div class="sched-info-detail">
+                        <span class="sched-info-label">Section</span>
+                        <span class="sched-info-value" id="infoSection">—</span>
+                    </div>
+                    <div class="sched-info-detail">
+                        <span class="sched-info-label">School Year</span>
+                        <span class="sched-info-value">2024 – 2025</span>
+                    </div>
+                    <div class="sched-info-detail">
+                        <span class="sched-info-label">Semester</span>
+                        <span class="sched-info-value">1st Semester</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm sched-print-btn" onclick="window.print()">🖨&nbsp;
+                        Print</button>
+                </div>
+
+                <div class="timetable-scroll">
+                    <table class="timetable" id="timetable">
+                        <thead>
+                            <tr>
+                                <th class="time-col">Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                            </tr>
+                        </thead>
+                        <tbody id="timetableBody"></tbody>
+                    </table>
+                </div>
+
+                <div class="legend">
+                    <span class="legend-title">Subject Legend</span>
+                    <div class="legend-items" id="legendItems"></div>
+                </div>
+
             </div>
-            <div class="placeholder-card">
-                <span class="placeholder-card-icon">📍</span>
-                <h3>Room Finder</h3>
-                <p>Search for a specific room number and get its building and floor location.</p>
-            </div>
-            <div class="placeholder-card">
-                <span class="placeholder-card-icon">🚗</span>
-                <h3>Getting Here</h3>
-                <p>Directions to GFMINHS from major landmarks in General Trias City, Cavite.</p>
-            </div>
-            <div class="placeholder-card">
-                <span class="placeholder-card-icon">🗺️</span>
-                <h3>Google Maps</h3>
-                <p>An embedded map view showing the school's exact location and surroundings.</p>
-            </div>
-            </div>
+
         </div>
     </main>
 
@@ -154,5 +201,7 @@
     </footer>
 
     <script src="main.js"></script>
+    <script src="schoolsched.js"></script>
 </body>
+
 </html>
